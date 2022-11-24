@@ -57,7 +57,7 @@ $ seq 10 | ./plus
 
 <a id="unkothink"></a>
 
-う○このAAが考え事をしてるASCII画像を生成するcowsayライクな~~クソ~~コマンドです。
+う○こが考え事をしてるASCII画像を生成するcowsayライクな~~クソ~~コマンドです。
 
 ## Description
 
