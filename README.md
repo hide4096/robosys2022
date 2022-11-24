@@ -28,17 +28,17 @@ sudo apt install python3
 
 ## Requirement
 
-`Python3.8.10`で開発したので、それ以上のバージョンなら動作します。たぶん
+Python3.7以降
 
-```
-$ python3 -V
-Python 3.8.10
-```
+date_nontpの実行にはネット環境も必要です。(httpとhttpsしか通らない~~ゴミ~~ネットワークでも可)
 
 次の環境で動作を確認しています
-- Ubuntu latest(2022/11/24時点で20.04)
+- Ubuntu 20.04
+  - Python3.7 ~ 3.10
 - Ubuntu 22.04
+  - Python3.7 ~ 3.10
 - Ubuntu 18.04
+  - Python3.7 ~ 3.10
 
 # plus
 
