@@ -2,7 +2,7 @@
 
 [![test](https://github.com/hide4096/plus_stdin/actions/workflows/test.yml/badge.svg)](https://github.com/hide4096/plus_stdin/actions/workflows/test.yml)
 
-未来ロボティクス学科セメスター4 ロボットシステム学の課題で作ったコマンドたちです
+未来ロボティクス学科セメスター4 ロボットシステム学の課題で作ったコマンドたちです。
 
 [plus](#plus)
 
