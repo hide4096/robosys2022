@@ -6,18 +6,34 @@
 
 [plus](#plus)
 
-[unkosay](#unkosay)
+[unkothink](#unkothink)
 
 [date_nontp](#date_nontp)
 
 ## Download
+
+これらのコマンドを使うには、このリポジトリを適当なとこにクローンしてください。
 
 ```
 git clone https://github.com/hide4096/plus_stdin.git
 cd plus_stdin
 ```
 
-## 
+Pythonが入っていない場合はインストールしてください
+
+```
+sudo apt update
+sudo apt install python3
+```
+
+## Requirement
+
+最新版のPython3があれば多分動きます
+
+次の環境で動作を確認しています
+- Ubuntu latest(2022/11/24時点で22.04)
+- Ubuntu 20.04
+- Ubuntu 18.04
 
 # plus
 
@@ -32,27 +48,34 @@ $ seq 10 | ./plus
 55.0
 ```
 
-# unkosay
+# unkothink
 
-<a id="unkosay"></a>
+<a id="unkothink"></a>
 
-う○このAAに吹き出しをつけて喋らせられるcowsayライクな~~クソ~~コマンドです。
+う○このAAが考え事をしてるASCII画像を生成するcowsayライクな~~クソ~~コマンドです。
 
 ## Description
 
 ```
-unkosay [-s] メッセージ
-  -s  うんこの段数
+unkothink [-s] メッセージ
 ```
-コマンドの後に入力した内容を喋っているう○このASCII画像を生成します。
+
+コマンドの後に入力した内容を考えているう○このASCII画像を生成します。
 引数なしで実行した場合は、標準入力から読み込みます。
+
+
+### Option
+
+```
+-s うんこの段数
+```
 
 -s オプションによって生成されるう○この段数が変化します。
 
 ## Usage
 
 ```
-$ ./unkosay -s 4 unkodesu
+$ ./unkothink -s 4 unkodesu
  ----------
 | unkodesu |
  ----------
@@ -66,7 +89,7 @@ $ ./unkosay -s 4 unkodesu
 ```
 
 ```
-$ echo unchi or unko? | ./unkosay -s 2
+$ echo unchi or unko? | ./unkothink -s 2
  ----------------
 | unchi or unko? |
  ----------------
@@ -88,6 +111,7 @@ HTTPのHEADリクエストを指定したサーバーに送信して、返って
 ```
 date_nontp [URL]
 ```
+
 HTTPのHEADリクエストを指定したサーバーに送信して、返ってきたヘッダーから時刻情報を抜き出して出力します。
 リンクを省略した場合は、`www.it-chiba.ac.jp`にリクエストを送信します。
 ~~NTPまでフィルタリングしやがるからこんなコマンドを作ったんだぞ~~
@@ -95,15 +119,15 @@ HTTPのHEADリクエストを指定したサーバーに送信して、返って
 ## Usage
 
 ```
-$ ./date_nontp
+$ ./date_nontp cit.manaba.jp
 Thu, 24 Nov 2022 05:42:41 GMT
 ```
+
+dateコマンドと組み合わせることで、NTPによる時刻合わせができない環境でも、システムの時刻を合わせることができます。
 
 ```
 $ sudo date -s "$(./date_nontp)"
 ```
-dateコマンドと組み合わせることで、NTPによる時刻合わせができない環境でも、システムの時刻を合わせることができます。
-
 
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
 - © 2022 Aso Hidetoshi
