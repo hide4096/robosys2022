@@ -7,8 +7,14 @@ jobs:
     - uses: actions/checkout@v3
     - name:  All test
       run: bash -xv ./test.bash
-  test_on_20-04:
-    runs-on: ubuntu-20.04
+  test_on_18-04:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v3
+    - name:  All test
+      run: bash -xv ./test.bash
+  test_on_22-04:
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
     - name:  All test
