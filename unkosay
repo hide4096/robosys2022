@@ -1,0 +1,68 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2022 Aso Hidetoshi asouhide2002@gmail.com
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+whatsay = ''
+step = 3
+next = ''
+
+def RptCr(length,chara):
+    space = ''
+    for i in range(length):
+        space += chara
+    return space
+
+for i in sys.argv[1:]:
+    if next != '':
+        if next == '-s':
+            try:
+                step = int(i)
+            except:
+                sys.exit(1)
+            next = ''
+        else:
+            sys.exit(1)
+    else:
+        if i.find('-') == 0:
+            next = i
+        else:
+            if whatsay == '':
+                whatsay = i
+
+if whatsay == '':
+    for i in sys.stdin:
+        whatsay+=i
+
+showsay = whatsay.splitlines()
+maxlen = max([len(i) for i in showsay])
+frame = ' ' + RptCr(maxlen + 2,'-') + ''
+
+print(frame)
+cnt = 0
+for i in showsay:
+    space = ''
+    for j in range(maxlen - len(i)):
+        space += ' '
+    
+    l = r = '|'
+    if len(showsay) > 1:
+        if cnt == 0:
+            l = '/'
+            r = '\\'
+        elif cnt == len(showsay)-1:
+            l = '\\'
+            r = '/'
+
+    print(l + ' ' + i + space + ' ' + r)
+    cnt += 1
+print(frame)
+
+print('  ○')
+print('   ○')
+
+for i in range(step):
+    if i == 0:
+        print(RptCr(step+1,' ') + '人')
+    print(RptCr(step-i,' ') + '(' + RptCr((i+1)*2,'_') + ')')
