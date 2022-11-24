@@ -6,6 +6,10 @@ import sys
 
 ans = 0.0
 for line in sys.stdin:
-    ans+=float(line)
+    try:
+        ans+=float(line)
+    except:
+        sys.exit(1)
 
 print(ans)
+sys.exit(0)

@@ -4,7 +4,7 @@
 
 import sys
 
-whatsay = ''
+whatthink = ''
 step = 3
 next = ''
 
@@ -28,30 +28,30 @@ for i in sys.argv[1:]:
         if i.find('-') == 0:
             next = i
         else:
-            if whatsay == '':
-                whatsay = i
+            if whatthink == '':
+                whatthink = i
 
-if whatsay == '':
+if whatthink == '':
     for i in sys.stdin:
-        whatsay+=i
+        whatthink+=i
 
-showsay = whatsay.splitlines()
-maxlen = max([len(i) for i in showsay])
+showthink = whatthink.splitlines()
+maxlen = max([len(i) for i in showthink])
 frame = ' ' + RptCr(maxlen + 2,'-') + ''
 
 print(frame)
 cnt = 0
-for i in showsay:
+for i in showthink:
     space = ''
     for j in range(maxlen - len(i)):
         space += ' '
     
     l = r = '|'
-    if len(showsay) > 1:
+    if len(showthink) > 1:
         if cnt == 0:
             l = '/'
             r = '\\'
-        elif cnt == len(showsay)-1:
+        elif cnt == len(showthink)-1:
             l = '\\'
             r = '/'
 

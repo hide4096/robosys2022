@@ -16,16 +16,16 @@ out=$(seq 10 | ./plus)
 out=$(./date_nontp)
 [ "$?" = 0 ] || ng ${LINENO}
 
-out=$(diff <(./unkosay hello) unko_1)
+out=$(diff <(./unkothink hello) unko_1)
 [ "$?" = 0 ] || ng ${LINENO}
 
-out=$(diff <(./unkosay -s 7 kuso) unko_2)
+out=$(diff <(./unkothink -s 7 kuso) unko_2)
 [ "$?" = 0 ] || ng ${LINENO}
 
-out=$(diff <(echo 'unchi' | ./unkosay) unko_3)
+out=$(diff <(echo 'unchi' | ./unkothink) unko_3)
 [ "$?" = 0 ] || ng ${LINENO}
 
-out=$(diff <(echo 'unko' | ./unkosay -s 4) unko_4)
+out=$(diff <(echo 'unko' | ./unkothink -s 4) unko_4)
 [ "$?" = 0 ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo OK
