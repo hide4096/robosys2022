@@ -28,11 +28,16 @@ sudo apt install python3
 
 ## Requirement
 
-最新版のPython3があれば多分動きます
+`Python3.8.10`で開発したので、それ以上のバージョンなら動作します。たぶん
+
+```
+$ python3 -V
+Python 3.8.10
+```
 
 次の環境で動作を確認しています
-- Ubuntu latest(2022/11/24時点で22.04)
-- Ubuntu 20.04
+- Ubuntu latest(2022/11/24時点で20.04)
+- Ubuntu 22.04
 - Ubuntu 18.04
 
 # plus
