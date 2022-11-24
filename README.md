@@ -30,7 +30,7 @@ sudo apt install python3
 
 Python3.7以降
 
-date_nontpの実行にはネット環境も必要です。(httpとhttpsしか通らない~~ゴミ~~ネットワークでも可)
+date_nontpの実行にはネット環境も必要です。(httpとhttpsしか通らない~~クソ~~ネットワークでも可)
 
 次の環境で動作を確認しています
 - Ubuntu 20.04
