@@ -13,9 +13,21 @@ res=0
 out=$(seq 10 | ./plus) 
 [ "$out" = 55.0 ] || ng ${LINENO}
 
-out=$(echo あ | ./plus)
-[ "$?" = 1 ] || ng ${LINENO}
-[ "$out" = "" ] ||ng ${LINENO}
+out=$(./date_nontp)
+[ "$?" = 0 ] || ng ${LINENO}
+
+out=$(diff <(./unkosay hello) unko_1)
+[ "$?" = 0 ] || ng ${LINENO}
+
+out=$(diff <(./unkosay -s 7 kuso) unko_2)
+[ "$?" = 0 ] || ng ${LINENO}
+
+out=$(diff <(echo 'unchi' | ./unkosay) unko_3)
+[ "$?" = 0 ] || ng ${LINENO}
+
+out=$(diff <(echo 'unko' | ./unkosay -s 4) unko_4)
+[ "$?" = 0 ] || ng ${LINENO}
 
 [ "$res" = 0 ] && echo OK
+
 exit $res
