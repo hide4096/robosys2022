@@ -68,6 +68,10 @@ unkothink [-s] メッセージ
 コマンドの後に入力した内容を考えているう○このASCII画像を生成します。
 引数なしで実行した場合は、標準入力から読み込みます。
 
+(2022/11/25 追記)
+
+既にあるなんて尻ませんでした
+(https://github.com/unkontributors/super_unko)
 
 ### Option
 
