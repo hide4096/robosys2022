@@ -70,7 +70,7 @@ unkothink [-s] メッセージ
 
 (2022/11/25 追記)
 
-既にあるなんて尻ませんでした
+既にあるなんて尻ませんでした...
 (https://github.com/unkontributors/super_unko)
 
 ### Option
