@@ -15,7 +15,7 @@
 これらのコマンドを使うには、このリポジトリを適当なとこにクローンしてください。
 
 ```
-git clone https://github.com/hide4096/plus_stdin.git
+git clone https://github.com/hide4096/robosys.git
 cd plus_stdin
 ```
 
