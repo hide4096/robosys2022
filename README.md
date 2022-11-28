@@ -16,7 +16,7 @@
 
 ```
 git clone https://github.com/hide4096/robosys2022.git
-cd plus_stdin
+cd robosys2022
 ```
 
 Pythonが入っていない場合はインストールしてください
